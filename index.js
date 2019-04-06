@@ -1,4 +1,93 @@
 "use strict";
+/** Class representing a highlight. */
+class Highlight {
+    /**
+     * Create a Highlight object.
+     * @param {number} startOffset - The startOffset value.
+     * @param {number} endOffset - The endOffset value.
+     * @param {string} color - The highlight color.
+     * @param {number} priority - The priority of the highlight.
+     */
+    constructor(startOffset, endOffset, color, priority) {
+        this.startOffset = startOffset;
+        this.endOffset = endOffset;
+        this.color = color;
+        this.priority = priority;
+    }
+
+    /**
+     * @return {string} A string representing this Highlight object.
+     */
+    toString() {
+        return `Highlight: (${this.startOffset},${this.endOffset})` +
+                `, ${this.color}, priority = ${this.priority}`;
+    }
+
+    /**
+     * Get the startOffset value.
+     * @return {number} The startOffset value.
+     */
+    get startOffset() {
+        return this._startOffset;
+    }
+
+    /**
+     * Get the endOffset value.
+     * @return {number} The endOffset value.
+     */
+    get endOffset() {
+        return this._endOffset;
+    }
+
+    /**
+     * Get the color value.
+     * @return {string} The color value.
+     */
+    get color() {
+        return this._color;
+    }
+
+    /**
+     * Get the priority value.
+     * @return {number} The priority value.
+     */
+    get priority() {
+        return this._priority;
+    }
+
+    /**
+     * Set the startOffset value.
+     * @param {number} The startOffset value.
+     */
+    set startOffset(value) {
+        this._startOffset = value;
+    }
+
+    /**
+     * Set the endOffset value.
+     * @param {number} The endOffset value.
+     */
+    set endOffset(value) {
+        this._endOffset = value;
+    }
+
+    /**
+     * Set the color value.
+     * @param {string} The color value.
+     */
+    set color(value) {
+        this._color = value;
+    }
+
+    /**
+     * Set the priority value.
+     * @param {number} The priority value.
+     */
+    set priority(value) {
+        this._priority = value;
+    }
+}
+
 const string = 'You will deliver new technology with an adorable puppy. Perfect!';
 const highlights = [
     {
@@ -55,12 +144,13 @@ const highlights = [
         color: '#eccf98', // perfect
         priority: 8,
     },
-    {
-        startOffset: -21321,
-        endOffset: 12432,
-        color: 'yellow', // entire input string
-        priority: 90,
-    },
+    // {
+    //     startOffset: -21321,
+    //     endOffset: 12432,
+    //     color: 'yellow', // entire input string
+    //     priority: 90,
+    // },
+    new Highlight(-21, 9000, 'yellow', 90)
 ];
 
 /**
