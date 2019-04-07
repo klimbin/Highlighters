@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import HighlightPanel, { Highlight } from './Highlight';
 
-/** Defines the text of the page to search through.
+/**
+ * Defines the text of the page to search through.
  * @constant
  */
 const pageText = `
@@ -31,8 +32,9 @@ const INITIAL_STATE = {
   highlightRender: null
 };
 
-/** This class will render the highlights for the phrase
- *  on every occurrence in the pageText.
+/**
+ * This class will render the highlights for the phrase
+ * on every occurrence in the pageText.
  */
 class App extends Component {
   constructor(props) {
@@ -49,7 +51,7 @@ class App extends Component {
    * then removes the given highlight from the App state.
    * Note that we use the highlight priority for the key.
    *
-   * @param {Number.} key
+   * @param {number} key
    */
   removeHighlight = (key) => {
     const { highlights } = this.state;
@@ -61,7 +63,7 @@ class App extends Component {
    * This method clears the previous renders
    * and creates new highlight renders.
    *
-   * @param {Number.} key
+   * @param {number} key
    */
   updateRenders = () => {
     const { inputText, phrase, highlights, highlightRender } = this.state;
@@ -94,7 +96,7 @@ export default App;
  *
  * Highlight renders are arrays represented by [start, end, color, priority].
  *
- * @param {Number} inputLength - The length of the phrase to be highlighted.
+ * @param {number} inputLength - The length of the phrase to be highlighted.
  * @param {Array.<Highlight>} highlights - A set of highlight objects.
  *
  * @return {Array.<Array.<Number, Number, String, Number>>} An array of highlight renders.

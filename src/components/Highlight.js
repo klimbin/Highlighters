@@ -97,7 +97,7 @@ class HighlightPanel extends Component {
    * then calls a callback function to remove the given highlight.
    * Note that we use the highlight priority for the key.
    *
-   * @param {Number.} key
+   * @param {number} key
    */
   deleteHighlight = (key) => {
     this.props.highlightChange(key);
