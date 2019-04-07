@@ -1,0 +1,19 @@
+.textContainer,
+.highlightBoxContainer {
+  height: 100vh;
+  float: left;
+  overflow: scroll;
+}
+
+.textContainer {
+  width: 70%;
+}
+
+.text {
+  width: 50%;
+  margin: 20px auto;
+}
+
+.highlightBoxContainer {
+  width: 30%;
+}

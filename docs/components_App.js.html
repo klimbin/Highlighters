@@ -1,4 +1,32 @@
-import React, { Component } from 'react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/App.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/App.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { Component } from 'react';
 import HighlightPanel from './Highlight';
 import { PAGE_TEXT, PHRASE, HIGHLIGHT_OBJECTS } from '../constants/input';
 import './App.css';
@@ -53,18 +81,18 @@ class App extends Component {
   render() {
     const { phrase, highlights, highlightRender } = this.state;
     return(
-      <div>
-        <div className="textContainer">
-          <p className="text"
+      &lt;div>
+        &lt;div className="textContainer">
+          &lt;p className="text"
              dangerouslySetInnerHTML={{__html: highlightRender}}>
-          </p>
-        </div>
-        <HighlightPanel
+          &lt;/p>
+        &lt;/div>
+        &lt;HighlightPanel
           phrase={phrase}
           highlights={highlights}
           highlightChange={this.removeHighlight}
         />
-      </div>
+      &lt;/div>
     )
   }
 }
@@ -79,9 +107,9 @@ export default App;
  * Highlight renders are arrays represented by [start, end, color, priority].
  *
  * @param {number} inputLength - The length of the phrase to be highlighted.
- * @param {Array.<Highlight>} highlights - A set of highlight objects.
+ * @param {Array.&lt;Highlight>} highlights - A set of highlight objects.
  *
- * @return {Array.<Array.<Number, Number, String, Number>>} An array of highlight renders.
+ * @return {Array.&lt;Array.&lt;Number, Number, String, Number>>} An array of highlight renders.
  */
 const calculateRenders = (inputLength, highlights) => {
   // sort highlights from top to bottom by their priority
@@ -94,15 +122,15 @@ const calculateRenders = (inputLength, highlights) => {
   // this string will represent which indices are already highlighted
   let spotsFilled = '0'.repeat(inputLength);
 
-  for (let i = 0; i < highlights.length; i++) {
+  for (let i = 0; i &lt; highlights.length; i++) {
     let current = highlights[i];
     let [start, end] = [current.startOffset, current.endOffset];
 
     // ignore current highlight if it does not have a valid range
-    if(start >= end || end <= 0 || start >= inputLength) {
+    if(start >= end || end &lt;= 0 || start >= inputLength) {
       continue;
     }
-    if(start < 0) {
+    if(start &lt; 0) {
       start = 0;
     }
     if(end > inputLength) {
@@ -135,7 +163,7 @@ const calculateRenders = (inputLength, highlights) => {
         nextOccurrence = sectionToConsider.indexOf('1', firstOccurrence+1);
       }
 
-      if(lastOccurrence < sectionToConsider.length-1) {
+      if(lastOccurrence &lt; sectionToConsider.length-1) {
         renders.push([start+lastOccurrence+1, end, color, priority]);
       }
     }
@@ -150,7 +178,7 @@ const calculateRenders = (inputLength, highlights) => {
  * The highlight renders must not have overlaps.
  *
  * @param {string} string - The phrase to be highlighted.
- * @param {Array.<Array.<Number, Number, String, Number>>} sections
+ * @param {Array.&lt;Array.&lt;Number, Number, String, Number>>} sections
  *
  * Highlight renders are represented by [start, end, color, priority].
  *
@@ -163,15 +191,38 @@ const getHighlightedText = (string, sections) => {
   // append each section with their highlights
   let result = [];
   let currentIndex = 0;
-  for(let i = 0; i < sections.length; i++) {
+  for(let i = 0; i &lt; sections.length; i++) {
     let [start, end, color, priority] = sections[i];
     let section = string.substring(currentIndex, start);
-    section += `<span class="render-${priority}"` +
+    section += `&lt;span class="render-${priority}"` +
                ` style="background-color:${color}">` +
-               `${string.substring(start, end)}</span>`;
+               `${string.substring(start, end)}&lt;/span>`;
     result.push(section);
     currentIndex = end;
   }
   result.push(string.substring(currentIndex));
   return result.join('');
 }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="App.html">App</a></li><li><a href="Highlight.html">Highlight</a></li><li><a href="HighlightPanel.html">HighlightPanel</a></li></ul><h3>Global</h3><ul><li><a href="global.html#calculateRenders">calculateRenders</a></li><li><a href="global.html#getHighlightedText">getHighlightedText</a></li><li><a href="global.html#HIGHLIGHT_OBJECTS">HIGHLIGHT_OBJECTS</a></li><li><a href="global.html#PAGE_TEXT">PAGE_TEXT</a></li><li><a href="global.html#PHRASE">PHRASE</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Apr 07 2019 05:29:33 GMT-0700 (Pacific Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
