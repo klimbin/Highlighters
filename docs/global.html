@@ -94,6 +94,72 @@
     
 
     
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="pageText"><span class="type-signature">(constant) </span>pageText<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Defines the text of the page to search through.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="App.js.html">App.js</a>, <a href="App.js.html#line7">line 7</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -104,7 +170,7 @@
     
 
     
-    <h4 class="name" id="calculateRenders"><span class="type-signature"></span>calculateRenders<span class="signature">(string, highlights)</span><span class="type-signature"> &rarr; {Array.&lt;Array.&lt;Number, Number, String, Number>>}</span></h4>
+    <h4 class="name" id="calculateRenders"><span class="type-signature"></span>calculateRenders<span class="signature">(inputLength, highlights)</span><span class="type-signature"> &rarr; {Array.&lt;Array.&lt;Number, Number, String, Number>>}</span></h4>
     
 
     
@@ -152,13 +218,13 @@ Highlight renders are arrays represented by [start, end, color, priority].
 
         <tr>
             
-                <td class="name"><code>string</code></td>
+                <td class="name"><code>inputLength</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">Number</span>
 
 
             
@@ -168,7 +234,7 @@ Highlight renders are arrays represented by [start, end, color, priority].
 
             
 
-            <td class="description last">The phrase to be highlighted.</td>
+            <td class="description last">The length of the phrase to be highlighted.</td>
         </tr>
 
     
@@ -232,7 +298,7 @@ Highlight renders are arrays represented by [start, end, color, priority].
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line168">line 168</a>
+        <a href="App.js.html">App.js</a>, <a href="App.js.html#line102">line 102</a>
     </li></ul></dd>
     
 
@@ -373,9 +439,7 @@ The highlight renders must not have overlaps.
 
             
 
-            <td class="description last">An array of highlight renders.
-
-Highlight renders are represented by [start, end, color, priority].</td>
+            <td class="description last">Highlight renders are represented by [start, end, color, priority].</td>
         </tr>
 
     
@@ -416,7 +480,7 @@ Highlight renders are represented by [start, end, color, priority].</td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line243">line 243</a>
+        <a href="App.js.html">App.js</a>, <a href="App.js.html#line175">line 175</a>
     </li></ul></dd>
     
 
@@ -467,165 +531,6 @@ Highlight renders are represented by [start, end, color, priority].</td>
 
 
         
-            
-
-    
-
-    
-    <h4 class="name" id="replaceText"><span class="type-signature"></span>replaceText<span class="signature">(string, replacementString)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    This function searches the HTML body tag
-and replaces all occurrences of the given string.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>string</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The text to search for.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>replacementString</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The replacement text.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line270">line 270</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
     
 
     
@@ -641,13 +546,13 @@ and replaces all occurrences of the given string.
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Highlight.html">Highlight</a></li></ul><h3>Global</h3><ul><li><a href="global.html#calculateRenders">calculateRenders</a></li><li><a href="global.html#getHighlightedText">getHighlightedText</a></li><li><a href="global.html#replaceText">replaceText</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="App.html">App</a></li><li><a href="Highlight.html">Highlight</a></li><li><a href="HighlightPanel.html">HighlightPanel</a></li></ul><h3>Global</h3><ul><li><a href="global.html#calculateRenders">calculateRenders</a></li><li><a href="global.html#getHighlightedText">getHighlightedText</a></li><li><a href="global.html#pageText">pageText</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat Apr 06 2019 12:13:23 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Apr 07 2019 00:37:47 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
