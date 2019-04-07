@@ -60,8 +60,8 @@ const PHRASE = 'You will deliver new technology with an adorable puppy. Perfect!
  * @constant
  */
 const HIGHLIGHT_OBJECTS = [
-  new Highlight(29,30,'orange',0),
-  new Highlight(24,27,'#eccf98',1),
+  new Highlight(0, 31,'#ec98ae', 0),
+  new Highlight(24, 27, '#eccf98', 1),
   new Highlight(4, 18, '#d9f593', 2),
   new Highlight(19, 22, '#e8e8e8', 3),
   new Highlight(17, 31, '#c6e5fa', 4),
@@ -69,7 +69,7 @@ const HIGHLIGHT_OBJECTS = [
   new Highlight(40, 55, '#ee93f5', 6),
   new Highlight(37, 55, '#c6e5fa', 7),
   new Highlight(56, 64, '#eccf98', 8),
-  new Highlight(-200, 200, 'yellow', 90)
+  new Highlight(-20, 100, 'yellow', 90)
 ];
 
 export { PAGE_TEXT, PHRASE, HIGHLIGHT_OBJECTS };

@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import Page from './Page';
 import HighlightPanel from './Highlight';
-import { PAGE_TEXT, PHRASE, HIGHLIGHT_OBJECTS } from '../constants/input';
+import ModalForm from './ModalForm';
+import { PAGE_TEXT, PHRASE, HIGHLIGHT_OBJECTS } from '../constants/Input';
 import './App.css';
 
 const INITIAL_STATE = {
   pageText: PAGE_TEXT,
   phrase: PHRASE,
   highlights: HIGHLIGHT_OBJECTS,
-  highlightRender: null
+  highlightRender: null,
+  addForm: false
 };
 
 /**
@@ -22,6 +25,28 @@ class App extends Component {
 
   componentDidMount() {
     this.updateRenders();
+  }
+
+  /**
+   * This method will update state
+   * to trigger rendering of the ModalForm.
+   */
+  openAddForm = () => {
+    this.setState({ addForm: true });
+  }
+
+  /**
+   * This method takes a Highlight object
+   * and adds it to the App state.
+   *
+   * @param {Object.<Highlight>} highlight
+   */
+  addHighlight = (highlight) => {
+    const { highlights } = this.state;
+    this.setState({
+      highlights: [...highlights, highlight],
+      addForm: false
+    }, this.updateRenders);
   }
 
   /**
@@ -51,18 +76,32 @@ class App extends Component {
   }
 
   render() {
-    const { phrase, highlights, highlightRender } = this.state;
+    const { phrase, highlights, highlightRender, addForm } = this.state;
+    const highlightKeys = highlights.map((h) => h.priority);
+
+    if(addForm) {
+      return(
+        <div>
+          <Page value={highlightRender} />
+          <HighlightPanel
+            phrase={phrase}
+            highlights={highlights}
+            removeHighlight={this.removeHighlight}
+            openAddForm={this.openAddForm}
+          />
+          <ModalForm keys={highlightKeys} addHighlight={this.addHighlight}/>
+        </div>
+      )
+    }
+
     return(
       <div>
-        <div className="textContainer">
-          <p className="text"
-             dangerouslySetInnerHTML={{__html: highlightRender}}>
-          </p>
-        </div>
+        <Page value={highlightRender} />
         <HighlightPanel
           phrase={phrase}
           highlights={highlights}
-          highlightChange={this.removeHighlight}
+          removeHighlight={this.removeHighlight}
+          openAddForm={this.openAddForm}
         />
       </div>
     )

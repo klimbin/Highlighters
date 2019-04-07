@@ -1,11 +1,11 @@
-.textContainer,
-.highlightBoxContainer {
+.leftContainer,
+.rightContainer {
   height: 100vh;
   float: left;
   overflow: scroll;
 }
 
-.textContainer {
+.leftContainer {
   width: 70%;
 }
 
@@ -14,6 +14,41 @@
   margin: 20px auto;
 }
 
-.highlightBoxContainer {
+.rightContainer {
   width: 30%;
+}
+
+.createHighlightContainer {
+  background-color: #e8e8e8;
+}
+
+.fixedContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.addFormContainer {
+  width: 50%;
+  height: 60%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e8e8e8;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.addForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.phraseInfo {
+  overflow-x: scroll;
 }

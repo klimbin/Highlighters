@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import BUNNY from '../constants/asciiArt';
+import CreateHighlight from './CreateHighlight';
+import Signature from '../constants/Signature';
 
 /** Class representing a highlight. */
 const Highlight = class {
@@ -93,17 +94,6 @@ const Highlight = class {
 /** This class renders boxes to represent each highlight object. */
 class HighlightPanel extends Component {
   /**
-   * This method takes a key unique to a highlight object
-   * then calls a callback function to remove the given highlight.
-   * Note that we use the highlight priority for the key.
-   *
-   * @param {number} key
-   */
-  deleteHighlight = (key) => {
-    this.props.highlightChange(key);
-  }
-
-  /**
    * This method takes a highlight object and
    * returns a div representing the highlight.
    *
@@ -129,7 +119,7 @@ class HighlightPanel extends Component {
             </p>
             <button
               className="btn btn-outline-dark"
-              onClick={() => this.deleteHighlight(priority)}
+              onClick={() => this.props.removeHighlight(priority)}
             >
               <span aria-hidden="true">remove</span>
             </button>
@@ -143,17 +133,9 @@ class HighlightPanel extends Component {
     const highlights = this.props.highlights;
     if(highlights.length === 0) {
       return (
-        <div>
-          <div className="text-center">
-            No more highlights!
-          </div>
-          <pre>
-            {BUNNY}
-          </pre>
-          <br/>
-          <div>
-            made by <a href="https://github.com/klimbin">kevin</a>
-          </div>
+        <div className="rightContainer">
+          <Signature />
+          <CreateHighlight openAddForm={this.props.openAddForm} />
         </div>
       )
     }
@@ -163,8 +145,9 @@ class HighlightPanel extends Component {
     );
 
     return (
-      <div className="highlightBoxContainer">
+      <div className="rightContainer">
         { highlightBoxes }
+        <CreateHighlight openAddForm={this.props.openAddForm} />
       </div>
     );
   }

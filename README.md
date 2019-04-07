@@ -4,8 +4,8 @@ Highlight phrases of text based on input.
 
 ### Assumptions
 
-* Highlight objects have distinct priorities. No one highlight can have the same priority.
-* Highlight objects contain valid property value types.
+* Highlight objects have distinct priorities. Highlights should not have the same priority.
+* User does not input invalid colors.
 
 ### Built With
 
