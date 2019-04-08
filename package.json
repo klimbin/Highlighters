@@ -2,7 +2,7 @@
   "name": "highlight-phrases",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/klimbin/highlight-phrases",
+  "homepage": "https://github.com/klimbin.github.io/highlight-phrases",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.0.1",
