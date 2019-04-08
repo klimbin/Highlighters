@@ -69,7 +69,7 @@ const HIGHLIGHT_OBJECTS = [
   new Highlight(40, 55, '#ee93f5', 6),
   new Highlight(37, 55, '#c6e5fa', 7),
   new Highlight(56, 64, '#eccf98', 8),
-  new Highlight(-20, 100, 'yellow', 90)
+  new Highlight(-20, 100, 'yellow', 9)
 ];
 
 export { PAGE_TEXT, PHRASE, HIGHLIGHT_OBJECTS };

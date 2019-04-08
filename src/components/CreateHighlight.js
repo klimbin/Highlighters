@@ -16,7 +16,7 @@ class CreateHighlight extends Component {
           <div className="card-text">
             <button
               className="btn btn-outline-dark"
-              onClick={() => this.props.openAddForm()}
+              onClick={() => this.props.showForm(true)}
             >
               <span aria-hidden="true">+</span>
             </button>

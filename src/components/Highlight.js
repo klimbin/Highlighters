@@ -14,18 +14,18 @@ const Highlight = class {
    * @param {number} priority - The priority of the highlight.
    */
   constructor(startOffset, endOffset, color, priority) {
-      this.startOffset = startOffset;
-      this.endOffset = endOffset;
-      this.color = color;
-      this.priority = priority;
+    this.startOffset = startOffset;
+    this.endOffset = endOffset;
+    this.color = color;
+    this.priority = priority;
   }
 
   /**
    * @return {string} A string representing this Highlight object.
    */
   toString() {
-      return `Highlight: (${this.startOffset},${this.endOffset})` +
-              `, ${this.color}, priority = ${this.priority}`;
+    return `Highlight: (${this.startOffset},${this.endOffset})` +
+          `, ${this.color}, priority = ${this.priority}`;
   }
 
   /**
@@ -33,7 +33,7 @@ const Highlight = class {
    * @return {number} The startOffset value.
    */
   get startOffset() {
-      return this._startOffset;
+    return this._startOffset;
   }
 
   /**
@@ -41,7 +41,7 @@ const Highlight = class {
    * @return {number} The endOffset value.
    */
   get endOffset() {
-      return this._endOffset;
+    return this._endOffset;
   }
 
   /**
@@ -49,7 +49,7 @@ const Highlight = class {
    * @return {string} The color value.
    */
   get color() {
-      return this._color;
+    return this._color;
   }
 
   /**
@@ -57,7 +57,7 @@ const Highlight = class {
    * @return {number} The priority value.
    */
   get priority() {
-      return this._priority;
+    return this._priority;
   }
 
   /**
@@ -65,7 +65,7 @@ const Highlight = class {
    * @param {number} The startOffset value.
    */
   set startOffset(value) {
-      this._startOffset = value;
+    this._startOffset = value;
   }
 
   /**
@@ -73,7 +73,7 @@ const Highlight = class {
    * @param {number} The endOffset value.
    */
   set endOffset(value) {
-      this._endOffset = value;
+    this._endOffset = value;
   }
 
   /**
@@ -81,7 +81,7 @@ const Highlight = class {
    * @param {string} The color value.
    */
   set color(value) {
-      this._color = value;
+    this._color = value;
   }
 
   /**
@@ -89,7 +89,7 @@ const Highlight = class {
    * @param {number} The priority value.
    */
   set priority(value) {
-      this._priority = value;
+    this._priority = value;
   }
 };
 
@@ -141,7 +141,7 @@ class HighlightPanel extends Component {
       return (
         <div className="rightContainer">
           <Signature />
-          <CreateHighlight openAddForm={this.props.openAddForm} />
+          <CreateHighlight showForm={this.props.showForm} />
         </div>
       )
     }
@@ -153,7 +153,7 @@ class HighlightPanel extends Component {
     return (
       <div className="rightContainer">
         { highlightBoxes }
-        <CreateHighlight openAddForm={this.props.openAddForm} />
+        <CreateHighlight showForm={this.props.showForm} />
       </div>
     );
   }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { PHRASE } from '../constants/Input';
-
 import AddForm from './AddForm';
+import { PHRASE } from '../constants/Input';
 
 /**
  * This class is a container for the AddForm
@@ -16,6 +15,12 @@ class ModalForm extends Component {
       <div className="fixedContainer">
         <div className="addFormContainer">
           <div className="addForm">
+            <button
+              type="button"
+              className="close"
+              onClick={() => this.props.showForm(false)}>
+              <span aria-hidden="true">&times;</span>
+            </button>
             <h4>
               Create New Highlight
             </h4>

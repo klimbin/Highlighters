@@ -10,7 +10,7 @@ const INITIAL_STATE = {
   phrase: PHRASE,
   highlights: HIGHLIGHT_OBJECTS,
   highlightRender: null,
-  addForm: false
+  displayForm: false
 };
 
 /**
@@ -28,11 +28,13 @@ class App extends Component {
   }
 
   /**
-   * This method will update state
-   * to trigger rendering of the ModalForm.
+   * This method will update state to handle whether
+   * the ModalForm should be rendered.
+   *
+   * @param {boolean} value
    */
-  openAddForm = () => {
-    this.setState({ addForm: true });
+  showForm = (value) => {
+    this.setState({ displayForm: value });
   }
 
   /**
@@ -45,7 +47,7 @@ class App extends Component {
     const { highlights } = this.state;
     this.setState({
       highlights: [...highlights, highlight],
-      addForm: false
+      displayForm: false
     }, this.updateRenders);
   }
 
@@ -76,10 +78,10 @@ class App extends Component {
   }
 
   render() {
-    const { phrase, highlights, highlightRender, addForm } = this.state;
+    const { phrase, highlights, highlightRender, displayForm } = this.state;
     const highlightKeys = highlights.map((h) => h.priority);
 
-    if(addForm) {
+    if(displayForm) {
       return(
         <div>
           <Page value={highlightRender} />
@@ -87,9 +89,13 @@ class App extends Component {
             phrase={phrase}
             highlights={highlights}
             removeHighlight={this.removeHighlight}
-            openAddForm={this.openAddForm}
+            showForm={this.showForm}
           />
-          <ModalForm keys={highlightKeys} addHighlight={this.addHighlight}/>
+          <ModalForm
+            keys={highlightKeys}
+            addHighlight={this.addHighlight}
+            showForm={this.showForm}
+          />
         </div>
       )
     }
@@ -101,7 +107,7 @@ class App extends Component {
           phrase={phrase}
           highlights={highlights}
           removeHighlight={this.removeHighlight}
-          openAddForm={this.openAddForm}
+          showForm={this.showForm}
         />
       </div>
     )
