@@ -69,7 +69,7 @@ class App extends Component {
    * @param {number} key
    */
   updateRenders = () => {
-    const { pageText, phrase, highlights, highlightRender } = this.state;
+    const { pageText, phrase, highlights } = this.state;
     const renders = calculateRenders(phrase.length, highlights);
     const newRender = getHighlightedText(phrase, renders);
     this.setState({ highlightRender: pageText.split(phrase).join(newRender) });
