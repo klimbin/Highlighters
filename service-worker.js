@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/klimbin/highlight-phrases/precache-manifest.b2a0d73ea72ba982e0a20ca9dd4578ec.js"
+  "/highlight-phrases/precache-manifest.8ca1a98a74c3f20785a7b25d14392318.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/klimbin/highlight-phrases/index.html", {
+workbox.routing.registerNavigationRoute("/highlight-phrases/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
