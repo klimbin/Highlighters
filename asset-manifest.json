@@ -1,5 +1,5 @@
 {
-  "main.css": "/highlight-phrases/static/css/main.6dce512b.chunk.css",
+  "main.css": "/highlight-phrases/static/css/main.3b0174db.chunk.css",
   "main.js": "/highlight-phrases/static/js/main.d189eff3.chunk.js",
   "main.js.map": "/highlight-phrases/static/js/main.d189eff3.chunk.js.map",
   "runtime~main.js": "/highlight-phrases/static/js/runtime~main.b5c5e95c.js",
@@ -8,8 +8,8 @@
   "static/js/2.d10d8a90.chunk.js": "/highlight-phrases/static/js/2.d10d8a90.chunk.js",
   "static/js/2.d10d8a90.chunk.js.map": "/highlight-phrases/static/js/2.d10d8a90.chunk.js.map",
   "index.html": "/highlight-phrases/index.html",
-  "precache-manifest.c5b70832ddfd2d98b4f8d4cf2509556f.js": "/highlight-phrases/precache-manifest.c5b70832ddfd2d98b4f8d4cf2509556f.js",
+  "precache-manifest.588fa6322704b73b933a176fe0a676c9.js": "/highlight-phrases/precache-manifest.588fa6322704b73b933a176fe0a676c9.js",
   "service-worker.js": "/highlight-phrases/service-worker.js",
   "static/css/2.084367fd.chunk.css.map": "/highlight-phrases/static/css/2.084367fd.chunk.css.map",
-  "static/css/main.6dce512b.chunk.css.map": "/highlight-phrases/static/css/main.6dce512b.chunk.css.map"
+  "static/css/main.3b0174db.chunk.css.map": "/highlight-phrases/static/css/main.3b0174db.chunk.css.map"
 }
