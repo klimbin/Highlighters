@@ -111,8 +111,8 @@ class HighlightPanel extends Component {
    * @param {Object.<Highlight>} highlight
    */
   renderHighlightBox = (highlight) => {
-    const { phrase, highlights, removeHighlight, showForm } = this.props;
-    const {startOffset, endOffset, color, priority} = highlight;
+    const { phrase, removeHighlight } = this.props;
+    const { startOffset, endOffset, color, priority } = highlight;
     const classNames = ['card text-center render-' + priority]
     const style = {backgroundColor: color};
     return (
