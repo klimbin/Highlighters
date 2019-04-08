@@ -10,9 +10,12 @@ const INITIAL_STATE = {
 };
 
 /**
- *  This class handles the form to create new Highlight objects.
+ * This class handles the form to create new Highlight objects.
+ *
+ * @param {Array.<number>} keys - The set of highlight priorities.
+ * @callback addHighlight - Callback to add a new highlight.
  */
-class AddForm extends Component {
+class NewHighlightForm extends Component {
   constructor(props) {
     super(props);
     this.state = { ...INITIAL_STATE};
@@ -40,7 +43,8 @@ class AddForm extends Component {
 
   render() {
     const { start, end, color, rank, error } = this.state;
-    const isInvalid = isNaN(start) || isNaN(end) || !isNaN(color) || isNaN(rank);
+    const isInvalid = isNaN(start) || isNaN(end) || !isNaN(color) || isNaN(rank)
+        || rank === '' || start === '' || color === '' || rank === '';
     return (
       <form className="text-center" onSubmit={this.onSubmit}>
         <input
@@ -92,4 +96,4 @@ class AddForm extends Component {
   }
 }
 
-export default AddForm;
+export default NewHighlightForm;

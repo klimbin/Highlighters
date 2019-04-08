@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: components/ModalForm.js</title>
+    <title>JSDoc: Source: components/SearchBar.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: components/ModalForm.js</h1>
+    <h1 class="page-title">Source: components/SearchBar.js</h1>
 
     
 
@@ -27,49 +27,51 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React, { Component } from 'react';
-import NewHighlightForm from './NewHighlightForm';
+import { PHRASE } from '../constants/Input';
+
+const INITIAL_STATE = {
+  query: PHRASE
+};
 
 /**
- * This class is a container for the NewHighlightForm
- * component to create new highlight objects
- * of the App and NewHighlightForm components.
+ * This class provides an input for users to create a
+ * query on what phrase to look for within PAGE_TEXT.
  *
- * @param {string} phrase - The phrase to be highlighted.
- * @param {Array.&lt;number>} keys - The set of highlight priorities.
- * @callback addHighlight - Callback to add a new highlight.
- * @callback showForm - Callback to display modal to create highlight.
+ * @callback setPhrase - Callback to update the search phrase.
  */
-class ModalForm extends Component {
+class SearchBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { ...INITIAL_STATE};
+  }
+
+  /** update the state with user's input */
+  onChange = (event) => {
+    const { setPhrase } = this.props;
+    this.setState({ [event.target.name]: event.target.value },
+      setPhrase(event.target.value));
+  }
+
   render() {
-    const { phrase, keys, addHighlight, showForm } = this.props;
+    const { query } = this.state;
 
     return (
-      &lt;div className="fullPageContainer">
-        &lt;div className="modalContainer">
-          &lt;div className="addForm">
-            &lt;button
-              type="button"
-              className="close"
-              onClick={() => showForm(false)}>
-              &lt;span aria-hidden="true">&amp;times;&lt;/span>
-            &lt;/button>
-            &lt;h4>
-              Create New Highlight
-            &lt;/h4>
-            &lt;div className="phraseInfo">
-              &lt;p>
-                Phrase: "{phrase}" (0,{phrase.length})
-              &lt;/p>
-            &lt;/div>
-            &lt;NewHighlightForm keys={keys} addHighlight={addHighlight}/>
-          &lt;/div>
-        &lt;/div>
+      &lt;div className="searchBarContainer">
+        &lt;h6 className="searchBarLabel">Query:&lt;/h6>
+        &lt;input
+          name="query"
+          value={query}
+          onChange={this.onChange}
+          className="form-control"
+          type="text"
+          placeholder="search query"
+        />
       &lt;/div>
     )
   }
 }
 
-export default ModalForm;
+export default SearchBar;
 </code></pre>
         </article>
     </section>

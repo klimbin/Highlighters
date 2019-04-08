@@ -17,7 +17,6 @@ Highlight phrases of text based on input.
 
 Documentation is placed under `docs/` and you can view them locally by opening its `index.html`.
 
-
 ### `npm start`
 
 Runs the app in the development mode.<br>

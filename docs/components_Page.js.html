@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: components/ModalForm.js</title>
+    <title>JSDoc: Source: components/Page.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: components/ModalForm.js</h1>
+    <h1 class="page-title">Source: components/Page.js</h1>
 
     
 
@@ -27,49 +27,33 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React, { Component } from 'react';
-import NewHighlightForm from './NewHighlightForm';
 
 /**
- * This class is a container for the NewHighlightForm
- * component to create new highlight objects
- * of the App and NewHighlightForm components.
+ * This class renders the text of the page.
  *
- * @param {string} phrase - The phrase to be highlighted.
- * @param {Array.&lt;number>} keys - The set of highlight priorities.
- * @callback addHighlight - Callback to add a new highlight.
- * @callback showForm - Callback to display modal to create highlight.
+ * @param {string} value - The text to be rendered.
  */
-class ModalForm extends Component {
+class Page extends Component {
   render() {
-    const { phrase, keys, addHighlight, showForm } = this.props;
-
-    return (
-      &lt;div className="fullPageContainer">
-        &lt;div className="modalContainer">
-          &lt;div className="addForm">
-            &lt;button
-              type="button"
-              className="close"
-              onClick={() => showForm(false)}>
-              &lt;span aria-hidden="true">&amp;times;&lt;/span>
-            &lt;/button>
-            &lt;h4>
-              Create New Highlight
-            &lt;/h4>
-            &lt;div className="phraseInfo">
-              &lt;p>
-                Phrase: "{phrase}" (0,{phrase.length})
-              &lt;/p>
-            &lt;/div>
-            &lt;NewHighlightForm keys={keys} addHighlight={addHighlight}/>
-          &lt;/div>
+    return(
+      &lt;div className="leftContainer">
+        &lt;div className="text">
+          &lt;h4>Dear Future Self&lt;/h4>
+          &lt;h6>
+            &lt;a href="https://open.spotify.com/artist/6OqhFYFJDnBBHas02HopPT">
+              Kero Kero Bonito
+            &lt;/a>
+          &lt;/h6>
+        &lt;/div>
+        &lt;div className="text"
+           dangerouslySetInnerHTML={{__html: this.props.value}}>
         &lt;/div>
       &lt;/div>
     )
   }
 }
 
-export default ModalForm;
+export default Page;
 </code></pre>
         </article>
     </section>

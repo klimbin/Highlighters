@@ -1,24 +1,28 @@
 import React, { Component } from 'react';
-import AddForm from './AddForm';
-import { PHRASE } from '../constants/Input';
+import NewHighlightForm from './NewHighlightForm';
 
 /**
- * This class is a container for the AddForm
+ * This class is a container for the NewHighlightForm
  * component to create new highlight objects
- * of the App and AddForm components.
+ * of the App and NewHighlightForm components.
+ *
+ * @param {string} phrase - The phrase to be highlighted.
+ * @param {Array.<number>} keys - The set of highlight priorities.
+ * @callback addHighlight - Callback to add a new highlight.
+ * @callback showForm - Callback to display modal to create highlight.
  */
 class ModalForm extends Component {
   render() {
-    const { keys, addHighlight } = this.props;
+    const { phrase, keys, addHighlight, showForm } = this.props;
 
     return (
-      <div className="fixedContainer">
-        <div className="addFormContainer">
+      <div className="fullPageContainer">
+        <div className="modalContainer">
           <div className="addForm">
             <button
               type="button"
               className="close"
-              onClick={() => this.props.showForm(false)}>
+              onClick={() => showForm(false)}>
               <span aria-hidden="true">&times;</span>
             </button>
             <h4>
@@ -26,10 +30,10 @@ class ModalForm extends Component {
             </h4>
             <div className="phraseInfo">
               <p>
-                Phrase: {PHRASE} (0,{PHRASE.length})
+                Phrase: "{phrase}" (0,{phrase.length})
               </p>
             </div>
-            <AddForm keys={keys} addHighlight={addHighlight}/>
+            <NewHighlightForm keys={keys} addHighlight={addHighlight}/>
           </div>
         </div>
       </div>

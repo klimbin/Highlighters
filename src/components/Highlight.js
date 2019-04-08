@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CreateHighlight from './CreateHighlight';
+import CreateHighlightCard from './CreateHighlightCard';
 import Signature from '../constants/Signature';
 
 /**
@@ -97,6 +97,11 @@ const Highlight = class {
  * This class renders boxes to represent each highlight object.
  * A button to create new highlight objects is also rendereded
  * at the bottom.
+ *
+ * @param {string} phrase - The phrase to be highlighted.
+ * @param {Array.<Highlight>} highlights - The set of highlight objects.
+ * @callback removeHighlight - Callback to delete a highlight.
+ * @callback showForm - Callback to display modal to create highlight.
  */
 class HighlightPanel extends Component {
   /**
@@ -106,7 +111,7 @@ class HighlightPanel extends Component {
    * @param {Object.<Highlight>} highlight
    */
   renderHighlightBox = (highlight) => {
-    const phrase = this.props.phrase;
+    const { phrase, highlights, removeHighlight, showForm } = this.props;
     const {startOffset, endOffset, color, priority} = highlight;
     const classNames = ['card text-center render-' + priority]
     const style = {backgroundColor: color};
@@ -114,7 +119,7 @@ class HighlightPanel extends Component {
       <div key={priority} className={classNames} style={style}>
         <div className="card-body">
           <h5 className="card-title">
-            Highlight {priority}
+            Priority {priority}
           </h5>
           <h6 className="card-subtitle">
             ({startOffset}, {endOffset})
@@ -125,7 +130,7 @@ class HighlightPanel extends Component {
             </p>
             <button
               className="btn btn-outline-dark"
-              onClick={() => this.props.removeHighlight(priority)}
+              onClick={() => removeHighlight(priority)}
             >
               <span aria-hidden="true">remove</span>
             </button>
@@ -136,12 +141,13 @@ class HighlightPanel extends Component {
   }
 
   render() {
-    const highlights = this.props.highlights;
+    const { highlights, showForm } = this.props;
+
     if(highlights.length === 0) {
       return (
         <div className="rightContainer">
+          <CreateHighlightCard showForm={showForm} />
           <Signature />
-          <CreateHighlight showForm={this.props.showForm} />
         </div>
       )
     }
@@ -152,8 +158,8 @@ class HighlightPanel extends Component {
 
     return (
       <div className="rightContainer">
+        <CreateHighlightCard showForm={showForm} />
         { highlightBoxes }
-        <CreateHighlight showForm={this.props.showForm} />
       </div>
     );
   }

@@ -12,7 +12,7 @@ const BUNNY = '\x7B\\\x5F\x5F\x2F\x7D\n\x28\x20\u2022\x20\x2E\x20\u2022\x29\n\x2
  */
 const Signature = () => {
   return (
-    <div>
+    <div className="signature">
       <div className="text-center">
         No more highlights!
       </div>

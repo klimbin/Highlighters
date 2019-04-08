@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SearchBar from './SearchBar';
 import Page from './Page';
 import HighlightPanel from './Highlight';
 import ModalForm from './ModalForm';
@@ -65,6 +66,16 @@ class App extends Component {
   }
 
   /**
+   * This method takes a string to search
+   * for within the PAGE_TEXT.
+   *
+   * @param {string} query
+   */
+  setPhrase = (query) => {
+    this.setState({ phrase: query }, this.updateRenders);
+  }
+
+  /**
    * This method clears the previous renders
    * and creates new highlight renders.
    *
@@ -84,6 +95,7 @@ class App extends Component {
     if(displayForm) {
       return(
         <div>
+          <SearchBar setPhrase={this.setPhrase} />
           <Page value={highlightRender} />
           <HighlightPanel
             phrase={phrase}
@@ -92,6 +104,7 @@ class App extends Component {
             showForm={this.showForm}
           />
           <ModalForm
+            phrase={phrase}
             keys={highlightKeys}
             addHighlight={this.addHighlight}
             showForm={this.showForm}
@@ -102,7 +115,8 @@ class App extends Component {
 
     return(
       <div>
-        <Page value={highlightRender} />
+        <SearchBar setPhrase={this.setPhrase} />
+        <Page value={highlightRender} setPhrase={this.setPhrase}/>
         <HighlightPanel
           phrase={phrase}
           highlights={highlights}

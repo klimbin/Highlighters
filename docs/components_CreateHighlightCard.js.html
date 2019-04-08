@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: components/ModalForm.js</title>
+    <title>JSDoc: Source: components/CreateHighlightCard.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: components/ModalForm.js</h1>
+    <h1 class="page-title">Source: components/CreateHighlightCard.js</h1>
 
     
 
@@ -27,49 +27,39 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React, { Component } from 'react';
-import NewHighlightForm from './NewHighlightForm';
 
 /**
- * This class is a container for the NewHighlightForm
- * component to create new highlight objects
- * of the App and NewHighlightForm components.
+ * This class is rendered in the highlight panel
+ * to allow users to open the modal form window
+ * and create a new highlight.
  *
- * @param {string} phrase - The phrase to be highlighted.
- * @param {Array.&lt;number>} keys - The set of highlight priorities.
- * @callback addHighlight - Callback to add a new highlight.
  * @callback showForm - Callback to display modal to create highlight.
  */
-class ModalForm extends Component {
+class CreateHighlightCard extends Component {
   render() {
-    const { phrase, keys, addHighlight, showForm } = this.props;
+    const { showForm } = this.props;
 
     return (
-      &lt;div className="fullPageContainer">
-        &lt;div className="modalContainer">
-          &lt;div className="addForm">
+      &lt;div className="card text-center createHighlightContainer">
+        &lt;div className="card-body">
+          &lt;h5 className="card-title">
+            Create Highlight
+          &lt;/h5>
+          &lt;div className="card-text">
             &lt;button
-              type="button"
-              className="close"
-              onClick={() => showForm(false)}>
-              &lt;span aria-hidden="true">&amp;times;&lt;/span>
+              className="btn btn-outline-dark"
+              onClick={() => showForm(true)}
+            >
+              &lt;span aria-hidden="true">&amp;#xFF0B;&lt;/span>
             &lt;/button>
-            &lt;h4>
-              Create New Highlight
-            &lt;/h4>
-            &lt;div className="phraseInfo">
-              &lt;p>
-                Phrase: "{phrase}" (0,{phrase.length})
-              &lt;/p>
-            &lt;/div>
-            &lt;NewHighlightForm keys={keys} addHighlight={addHighlight}/>
           &lt;/div>
         &lt;/div>
       &lt;/div>
     )
   }
-}
+};
 
-export default ModalForm;
+export default CreateHighlightCard;
 </code></pre>
         </article>
     </section>

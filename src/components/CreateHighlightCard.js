@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 
 /**
  * This class is rendered in the highlight panel
- * and allows users to open the modal form window
- * to create a new highlight.
+ * to allow users to open the modal form window
+ * and create a new highlight.
+ *
+ * @callback showForm - Callback to display modal to create highlight.
  */
-class CreateHighlight extends Component {
+class CreateHighlightCard extends Component {
   render() {
+    const { showForm } = this.props;
+
     return (
       <div className="card text-center createHighlightContainer">
         <div className="card-body">
@@ -16,9 +20,9 @@ class CreateHighlight extends Component {
           <div className="card-text">
             <button
               className="btn btn-outline-dark"
-              onClick={() => this.props.showForm(true)}
+              onClick={() => showForm(true)}
             >
-              <span aria-hidden="true">+</span>
+              <span aria-hidden="true">&#xFF0B;</span>
             </button>
           </div>
         </div>
@@ -27,4 +31,4 @@ class CreateHighlight extends Component {
   }
 };
 
-export default CreateHighlight;
+export default CreateHighlightCard;

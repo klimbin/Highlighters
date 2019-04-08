@@ -4,12 +4,7 @@ import { Highlight } from '../components/Highlight';
  * The text of the page to search through.
  * @constant
  */
-const PAGE_TEXT = `<h4>Dear Future Self</h4>
-  <h6>
-    <a href="https://open.spotify.com/artist/6OqhFYFJDnBBHas02HopPT">
-      Kero Kero Bonito
-    </a>
-  </h6>
+const PAGE_TEXT = `
   Dear future self, it's me again</br>
   You will deliver new technology with an adorable puppy. Perfect!</br>
   The girl you buried way back when</br>
@@ -63,13 +58,13 @@ const HIGHLIGHT_OBJECTS = [
   new Highlight(0, 31,'#ec98ae', 0),
   new Highlight(24, 27, '#eccf98', 1),
   new Highlight(4, 18, '#d9f593', 2),
-  new Highlight(19, 22, '#e8e8e8', 3),
-  new Highlight(17, 31, '#c6e5fa', 4),
-  new Highlight(40, 48, '#d9f593', 5),
-  new Highlight(40, 55, '#ee93f5', 6),
-  new Highlight(37, 55, '#c6e5fa', 7),
-  new Highlight(56, 64, '#eccf98', 8),
-  new Highlight(-20, 100, 'yellow', 9)
+  new Highlight(19, 22, '#c6e5fa', 3),
+  new Highlight(17, 31, '#e8e8e8', 4),
+  new Highlight(40, 48, '#ee93f5', 5),
+  new Highlight(40, 55, '#59acff', 6),
+  new Highlight(37, 55, '#f9b8ae', 7),
+  new Highlight(56, 64, '#79ed6f', 8),
+  new Highlight(0, 64, '#f1f593', 9)
 ];
 
 export { PAGE_TEXT, PHRASE, HIGHLIGHT_OBJECTS };
