@@ -1,15 +1,15 @@
 {
-  "main.css": "/klimbin/Highlighters/static/css/main.2d701edd.chunk.css",
-  "main.js": "/klimbin/Highlighters/static/js/main.f66cd3a3.chunk.js",
-  "main.js.map": "/klimbin/Highlighters/static/js/main.f66cd3a3.chunk.js.map",
-  "runtime~main.js": "/klimbin/Highlighters/static/js/runtime~main.63c38531.js",
-  "runtime~main.js.map": "/klimbin/Highlighters/static/js/runtime~main.63c38531.js.map",
-  "static/css/2.2563aa7b.chunk.css": "/klimbin/Highlighters/static/css/2.2563aa7b.chunk.css",
-  "static/js/2.36a3526d.chunk.js": "/klimbin/Highlighters/static/js/2.36a3526d.chunk.js",
-  "static/js/2.36a3526d.chunk.js.map": "/klimbin/Highlighters/static/js/2.36a3526d.chunk.js.map",
-  "index.html": "/klimbin/Highlighters/index.html",
-  "precache-manifest.7768e3f8adb5134e4182e8be85940bea.js": "/klimbin/Highlighters/precache-manifest.7768e3f8adb5134e4182e8be85940bea.js",
-  "service-worker.js": "/klimbin/Highlighters/service-worker.js",
-  "static/css/2.2563aa7b.chunk.css.map": "/klimbin/Highlighters/static/css/2.2563aa7b.chunk.css.map",
-  "static/css/main.2d701edd.chunk.css.map": "/klimbin/Highlighters/static/css/main.2d701edd.chunk.css.map"
+  "main.css": "/klimbin/highlight-phrases/static/css/main.a6f14add.chunk.css",
+  "main.js": "/klimbin/highlight-phrases/static/js/main.956ed301.chunk.js",
+  "main.js.map": "/klimbin/highlight-phrases/static/js/main.956ed301.chunk.js.map",
+  "runtime~main.js": "/klimbin/highlight-phrases/static/js/runtime~main.4b840604.js",
+  "runtime~main.js.map": "/klimbin/highlight-phrases/static/js/runtime~main.4b840604.js.map",
+  "static/css/2.084367fd.chunk.css": "/klimbin/highlight-phrases/static/css/2.084367fd.chunk.css",
+  "static/js/2.d10d8a90.chunk.js": "/klimbin/highlight-phrases/static/js/2.d10d8a90.chunk.js",
+  "static/js/2.d10d8a90.chunk.js.map": "/klimbin/highlight-phrases/static/js/2.d10d8a90.chunk.js.map",
+  "index.html": "/klimbin/highlight-phrases/index.html",
+  "precache-manifest.b2a0d73ea72ba982e0a20ca9dd4578ec.js": "/klimbin/highlight-phrases/precache-manifest.b2a0d73ea72ba982e0a20ca9dd4578ec.js",
+  "service-worker.js": "/klimbin/highlight-phrases/service-worker.js",
+  "static/css/2.084367fd.chunk.css.map": "/klimbin/highlight-phrases/static/css/2.084367fd.chunk.css.map",
+  "static/css/main.a6f14add.chunk.css.map": "/klimbin/highlight-phrases/static/css/main.a6f14add.chunk.css.map"
 }
