@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import CreateHighlight from './CreateHighlight';
 import Signature from '../constants/Signature';
 
-/** Class representing a highlight. */
+/**
+ * This class represents a highlight object.
+ */
 const Highlight = class {
   /**
    * Create a Highlight object.
@@ -91,7 +93,11 @@ const Highlight = class {
   }
 };
 
-/** This class renders boxes to represent each highlight object. */
+/**
+ * This class renders boxes to represent each highlight object.
+ * A button to create new highlight objects is also rendereded
+ * at the bottom.
+ */
 class HighlightPanel extends Component {
   /**
    * This method takes a highlight object and
