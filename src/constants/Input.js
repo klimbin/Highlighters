@@ -5,44 +5,44 @@ import { Highlight } from '../components/Highlight';
  * @constant
  */
 const PAGE_TEXT = `
-  Dear future self, it's me again</br>
-  You will deliver new technology with an adorable puppy. Perfect!</br>
-  The girl you buried way back when</br>
-  I see you gave into curiosity</br>
-  You will deliver new technology with an adorable puppy. Perfect!</br>
-  My life right now is going well</br>
-  I've time to spare as one can tell</br>
-  You will deliver new technology with an adorable puppy. Perfect!</br>
-  But you might just sense some trepidation too</br>
-  You will deliver new technology with an adorable puppy. Perfect!</br>
-  No one knows where they really want to go</br>
-  Why we always stay inside</br>
-  And now it snows</br>
-  But I bet you miss it all</br>
-  So</br>
-  Do cars ever fly?</br>
-  Have you travelled time?</br>
-  You will deliver new technology with an adorable puppy. Perfect!</br>
-  Or is it just the same old thing for you and I?</br>
-  I used to be fine because you always seemed so far away</br>
-  But now I feel our paths getting closer each day</br>
-  You'll find enclosed, a passport photograph</br>
-  The headlines and a railcard</br>
-  It's funny how physical us humans are</br>
-  You will deliver new technology with an adorable puppy. Perfect!</br>
-  Ahh-ahh-ahh-ahh</br>
-  But I heard all the years'll leave you hurt</br>
-  Everyone you love disappears and nothing works</br>
-  Please don't say you hate the world</br>
-  I hope that I won't</br>
-  You will deliver new technology with an adorable puppy. Perfect!</br>
-  Do cars ever fly?</br>
-  Have you travelled time?</br>
-  Or is it just the same old thing for you and I?</br>
-  You will deliver new technology with an adorable puppy. Perfect!</br>
-  I used to be fine because you always seemed so far away</br>
-  But now I feel our paths getting closer each day</br>
-  It's rather strange`;
+Dear future self, it's me again
+You will deliver new technology with an adorable puppy. Perfect!
+The girl you buried way back when
+I see you gave into curiosity
+You will deliver new technology with an adorable puppy. Perfect!
+My life right now is going well
+I've time to spare as one can tell
+You will deliver new technology with an adorable puppy. Perfect!
+But you might just sense some trepidation too
+You will deliver new technology with an adorable puppy. Perfect!
+No one knows where they really want to go
+Why we always stay inside
+And now it snows
+But I bet you miss it all
+So
+Do cars ever fly?
+Have you travelled time?
+You will deliver new technology with an adorable puppy. Perfect!
+Or is it just the same old thing for you and I?
+I used to be fine because you always seemed so far away
+But now I feel our paths getting closer each day
+You'll find enclosed, a passport photograph
+The headlines and a railcard
+It's funny how physical us humans are
+You will deliver new technology with an adorable puppy. Perfect!
+Ahh-ahh-ahh-ahh
+But I heard all the years'll leave you hurt
+Everyone you love disappears and nothing works
+Please don't say you hate the world
+I hope that I won't
+You will deliver new technology with an adorable puppy. Perfect!
+Do cars ever fly?
+Have you travelled time?
+Or is it just the same old thing for you and I?
+You will deliver new technology with an adorable puppy. Perfect!
+I used to be fine because you always seemed so far away
+But now I feel our paths getting closer each day
+It's rather strange`;
 
 /**
  * The phrase to highlight.

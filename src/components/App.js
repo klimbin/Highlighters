@@ -85,7 +85,8 @@ class App extends Component {
     const { pageText, phrase, highlights } = this.state;
     const renders = calculateRenders(phrase.length, highlights);
     const newRender = getHighlightedText(phrase, renders);
-    this.setState({ highlightRender: pageText.split(phrase).join(newRender) });
+    const preWrap = `<pre>${pageText.split(phrase).join(newRender)}</pre>`;
+    this.setState({ highlightRender: preWrap });
   }
 
   render() {
